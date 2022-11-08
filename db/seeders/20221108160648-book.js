@@ -21,6 +21,7 @@ module.exports = {
       },
     ]);
   },
+  //test
 
   async down(queryInterface,) {
     /**
