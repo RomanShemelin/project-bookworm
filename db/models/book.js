@@ -3,20 +3,20 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class Book extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ Book, Comment }) {
+    static associate({ User, Comment }) {
       // define association here
-      User.belongsToMany(Book, { through: Comment, foreignKey: 'userId', otherKey: 'bookId' });
-      User.hasMany(Book, { foreignKey: 'userId' });
-      User.hasHook(Comment, { foreignKey: 'userId' });
+      Book.belongsToMany(User, { through: Comment, foreignKey: 'bookId', otherKey: 'userId' });
+      Book.belongsTo(User, { foreignKey: 'userId' });
+      Book.hasMany(Comment, { foreignKey: 'bookId' });
     }
   }
-  User.init({
+  Book.init({
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -25,14 +25,19 @@ module.exports = (sequelize, DataTypes) => {
     },
     name: {
       type: DataTypes.TEXT,
-      allowNull: false,
     },
-    email: {
+    author: {
       type: DataTypes.TEXT,
-      unique: true,
     },
-    password: {
+    image: {
       type: DataTypes.TEXT,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Users',
+        key: 'id',
+      },
     },
     createdAt: {
       allowNull: false,
@@ -44,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'User',
+    modelName: 'Book',
   });
-  return User;
+  return Book;
 };
