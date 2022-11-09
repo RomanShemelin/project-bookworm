@@ -8,7 +8,7 @@ module.exports = function FavoriteBookCard({ user, book }) {
         <h4 className="card-title">Название:{book.name}</h4>
         <h4 className="card-title">Автор:{book.author}</h4>
         {/* <p class="card-text">{newcomment.comment}</p> */}
-        {user && (user.id === book.userId) && (<button type="button" className="btn btn-danger">Удалить</button>)}
+        {user && (<button type="button" name={book.id} className="btn btn-danger btn-favorite">Удалить</button>)}
       </div>
     </div>
   )

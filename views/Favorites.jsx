@@ -10,6 +10,7 @@ module.exports = function Favorites({ title, user, books }) {
         <div className = "favoriteDiv">
             {books.map((book) => <FavoriteBookCard key = {book.id} book={book} user={user}/>)}
         </div>
+        <script defer src="/js/favorites.js" />
       </Layout>
     );
   };

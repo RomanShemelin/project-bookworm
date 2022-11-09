@@ -16,4 +16,25 @@ router.get('/', async (req, res) => {
   }, { doctype: false });
 });
 
+router.delete('/:bookId', async (req, res) => {
+  const { user } = res.locals;
+  const { bookId } = req.params;
+  try {
+    const result = await Favorite.destroy({ where: { userId: user.id, bookId } });
+    res.json({ message: true });
+  } catch (err) {
+    return res.status(500).json({ status: 'error', message: `${err.message}` });
+  }
+});
+//   const { id } = req.params;
+//   try {
+//     if (!user) {
+//       return res.status(404);
+//     }
+//     await Book.destroy({ where: { id, userId: user.id } });
+//     res.json({ message: true });
+//   } catch (err) {
+//     return res.status(500).json({ status: 'error', message: `${err.message}` });
+//   }
+
 module.exports = router;
