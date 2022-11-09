@@ -6,8 +6,8 @@ module.exports = function Header({ user }) {
       {user
         ? (
           <>
-            <nav class="navbar navbar-dark bg-dark">
-              <div class="container-fluid">
+            <nav className="navbar navbar-dark bg-dark">
+              <div className="container-fluid">
 
                 <li className="nav-item">
                   <a className="nav-link" href="/">Главная</a>

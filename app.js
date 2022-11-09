@@ -8,6 +8,7 @@ const serverConfig = require('./config/serverConfig');
 const mainPageRouter = require('./routes/mainPageRouter');
 const authRouter = require('./routes/authRouter');
 const bookPageRouter = require('./routes/bookPageRouter');
+const favoriteRouter = require('./routes/favoriteRouter');
 
 const PORT = process.env.PORT ?? 3000;
 // конфигурация приложения
@@ -16,7 +17,7 @@ serverConfig(app);
 app.use('/', mainPageRouter);
 app.use('/auth', authRouter);
 app.use('/book', bookPageRouter);
-
+app.use('/favorite', favoriteRouter);
 app.listen(PORT, async () => {
   try {
     await sequelize.authenticate();

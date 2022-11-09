@@ -195,3 +195,10 @@ input:focus {
 .card-img-top {
   height: 400px;
 }
+.favoriteDiv {
+display: flex;
+justify-content:center;
+margin:20;
+padding:10;
+align-content: flex-start;
+}
