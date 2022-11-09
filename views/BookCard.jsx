@@ -9,7 +9,7 @@ module.exports = function BookCard({ user, book }) {
         <h4 className="card-title">Автор:{book.author}</h4>
         {/* <p class="card-text">{newcomment.comment}</p> */}
         {user && (user.id === book.userId) && (<button type="button" className="btn btn-danger">Удалить</button>)}
-        {user && (user.id === book.userId) && (<a href={`/book/${book.id}`} type="button" className="btn btn-warning">Изменить</a>)}
+        {user && (user.id === book.userId) && (<a href={`/editbook/${book.id}`} type="button" className="btn btn-warning">Изменить</a>)}
       </div>
     </div>
   )

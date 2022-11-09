@@ -1,4 +1,4 @@
-const deleteform = document.querySelector('.bookList');
+const deleteform = document.querySelector('.cardList');
 console.log(deleteform);
 deleteform.addEventListener('click', async (event) => {
   const isDeleteBtn = event.target.classList.contains('btn-danger');

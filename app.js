@@ -8,6 +8,8 @@ const serverConfig = require('./config/serverConfig');
 const mainPageRouter = require('./routes/mainPageRouter');
 const authRouter = require('./routes/authRouter');
 const bookPageRouter = require('./routes/bookPageRouter');
+const searchBookRouter = require('./routes/searchBookRouter');
+const editBookRouter = require('./routes/editBookRouter');
 
 const PORT = process.env.PORT ?? 3000;
 // конфигурация приложения
@@ -16,6 +18,8 @@ serverConfig(app);
 app.use('/', mainPageRouter);
 app.use('/auth', authRouter);
 app.use('/book', bookPageRouter);
+app.use('/editbook', editBookRouter);
+app.use('/search', searchBookRouter);
 
 app.listen(PORT, async () => {
   try {
