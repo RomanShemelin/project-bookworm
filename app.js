@@ -10,6 +10,7 @@ const authRouter = require('./routes/authRouter');
 const bookPageRouter = require('./routes/bookPageRouter');
 const searchBookRouter = require('./routes/searchBookRouter');
 const editBookRouter = require('./routes/editBookRouter');
+const commentsRouter = require('./routes/commentsRouter');
 
 const PORT = process.env.PORT ?? 3000;
 // конфигурация приложения
@@ -20,6 +21,7 @@ app.use('/auth', authRouter);
 app.use('/book', bookPageRouter);
 app.use('/editbook', editBookRouter);
 app.use('/search', searchBookRouter);
+app.use('/comment', commentsRouter)
 
 app.listen(PORT, async () => {
   try {

@@ -7,7 +7,7 @@ module.exports = function Main({ title, user, books }) {
   return (
     <Layout title={title}>
       <Header user={user} />
-      <BookList books={books} />
+      {user&&<BookList books={books} />}
     </Layout>
   );
 };
