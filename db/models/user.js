@@ -11,9 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ Book, Comment }) {
       // define association here
-      User.belongsToMany(Book, { through: Comment, foreignKey: 'userId', otherKey: 'bookId' });
-      User.hasMany(Book, { foreignKey: 'userId' });
-      User.hasHook(Comment, { foreignKey: 'userId' });
+      User.belongsToMany(Book, {
+        through: Comment, foreignKey: 'userId', otherKey: 'bookId', onDelete: 'CASCADE',
+      });
+      User.hasMany(Book, { foreignKey: 'userId', onDelete: 'CASCADE' });
+      User.hasHook(Comment, { foreignKey: 'userId', onDelete: 'CASCADE' });
     }
   }
   User.init({

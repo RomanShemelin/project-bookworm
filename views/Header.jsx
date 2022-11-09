@@ -19,6 +19,9 @@ module.exports = function Header({ user }) {
                   <a className="nav-link" href="/favorite">Избранное</a>
                 </li>
                 <li className="nav-item">
+                  <a className="nav-link" href="/search">Найти</a>
+                </li>
+                <li className="nav-item">
                   <a className="nav-link" href="/auth/signout">Выйти</a>
                 </li>
               </div>
