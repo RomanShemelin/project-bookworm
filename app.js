@@ -7,6 +7,7 @@ const serverConfig = require('./config/serverConfig');
 // роутеры
 const mainPageRouter = require('./routes/mainPageRouter');
 const authRouter = require('./routes/authRouter');
+const bookPageRouter = require('./routes/bookPageRouter');
 
 const PORT = process.env.PORT ?? 3000;
 // конфигурация приложения
@@ -14,6 +15,7 @@ serverConfig(app);
 // маршрутизация приложения
 app.use('/', mainPageRouter);
 app.use('/auth', authRouter);
+app.use('/book', bookPageRouter);
 
 app.listen(PORT, async () => {
   try {
