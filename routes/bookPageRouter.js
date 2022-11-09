@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Book, User, Comment } = require('../db/models');
 const Private = require('../views/Private.jsx');
 const BookCard = require('../views/BookCard.jsx');
-const EditBook = require('../views/EditBook.jsx');
 
 router.route('/')
   .get(async (req, res) => {
@@ -25,14 +24,9 @@ router.route('/')
     res.renderComponent(BookCard, { user, book }, { doctype: false });
   });
 router.route('/:id')
-  .get(async (req, res) => {
-    const { user } = res.locals;
-    const bookId = Number(req.params.id);
-    const book = await Book.findOne({ where: { id: bookId } });
-    res.renderComponent(EditBook, { user, book });
-  })
   .delete(async (req, res) => {
     const { user } = res.locals;
+    console.log(req.params);
     const { id } = req.params;
     try {
       if (!user) {
