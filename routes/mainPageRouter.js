@@ -1,9 +1,16 @@
 const router = require('express').Router();
 const Main = require('../views/Main.jsx');
+const { Book } = require('../db/models');
 
-router.get('/', (req, res) => {
+
+router.get('/', async (req, res) => {
   const { user } = res.locals;
-  res.renderComponent(Main, { user, title: 'Simple app' });
+    const books = await Book.findAll();
+   console.log(books)
+  res.renderComponent(Main, { user, title: 'Simple app', books });
 });
+
+
+
 
 module.exports = router;
