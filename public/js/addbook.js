@@ -1,5 +1,5 @@
 const form = document.querySelector('.addbook');
-console.log(form);
+// console.log(form);
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
   const {
