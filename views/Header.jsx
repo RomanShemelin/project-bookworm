@@ -13,13 +13,14 @@ module.exports = function Header({ user }) {
                   <a className="nav-link" href="/">Главная</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/notes">Мои заметки</a>
+                  <a className="nav-link" href="/book">Добавить книгу</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/favorite">Избранное</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/auth/signout">Выйти</a>
                 </li>
-
-
               </div>
             </nav>
 
@@ -27,8 +28,8 @@ module.exports = function Header({ user }) {
         )
         : (
           <>
-            <nav class="navbar navbar-dark bg-dark">
-              <div class="container-fluid">
+            <nav className="navbar navbar-dark bg-dark">
+              <div className="container-fluid">
 
                 <li className="nav-item">
                   <a className="nav-link" href="/">Главная</a>
