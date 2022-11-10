@@ -8,7 +8,7 @@ module.exports = function Private({ user, books }) {
   return (
     <Layout>
       <Header user={user} />
-      <section  className='container'>
+      <section className='container'>
         <form method='POST' action='/book' className='addbook'>
           <div className="mb-3">
             <label htmlFor="exampleInput" className="form-label"><h3>Название книги</h3></label>
@@ -34,6 +34,7 @@ module.exports = function Private({ user, books }) {
       </div>
       <script defer src="/js/addbook.js" />
       <script defer src="/js/deletebook.js" />
+
 
     </Layout>
   );
