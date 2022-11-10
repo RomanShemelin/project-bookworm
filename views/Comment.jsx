@@ -11,17 +11,18 @@ const Commentar = ({ comments, user, book }) => {
          <Header user={user} />
          <section className='container'>
             <h5>Добавить комментарий</h5>
-            <form method='post' action={`/comment/${book.id}`} className='commentForm'>
+            <form method='post' action={`/comments/${book.id}`} className='commentForm'>
                <input className='commentInput' name='commentText' type='text'></input>
                <button type='submit' className='commentButton'>Сохранить</button>
             </form>
          </section>
-         <section className='commentlist'>
+         <div className='commentlist'>
 
-            {comments.map((comment) => <CommentCard key={comment.id} comment={comment} />)}
+            {comments.map((comment) => <CommentCard key={comment.id} comment={comment} user={user}/>)}
 
-         </section>
-         <script src='/js/comment.js'></script>
+         </div>
+         <script defer src='/js/comment.js'></script>
+         <script defer src='/js/deleteComment.js'></script>
       </Layout>
    )
 }

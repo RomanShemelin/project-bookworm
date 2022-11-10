@@ -11,8 +11,8 @@ commentForm.addEventListener('submit', async (event) => {
   });
   const comment = await res.text();
 
-  console.log(comment);
 
-  document.querySelector('.commentlist').innerHTML += comment;
+  const list = document.querySelector('.commentlist');
+  list.insertAdjacentHTML('afterbegin', comment)
   commentForm.reset();
 });
