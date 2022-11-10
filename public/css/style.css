@@ -240,7 +240,8 @@ display: flex;
 flex-direction: column;
 background-color: ;
 }
-.btn {
+.btn,
+.commentButton {
   display: inline-block;
   color: rgb(10, 5, 5);
   font-size: 21px;
@@ -256,7 +257,8 @@ background-color: ;
   font-family: "Rostin", Courier, monospace;
 }
 
-.btn:hover {
+.btn:hover,
+.commentButton:hover {
   background: rgba(100, 100, 100, 0.4);
 }
 
@@ -270,6 +272,11 @@ background-color: ;
   color: rgb(243, 174, 46);
   margin-left: 20px;
   font-size: 35px;
+}
+
+.titleAddComment {
+  color: rgb(243, 174, 46);
+  font-size: 25px;
 }
 
 .loginText {
@@ -311,4 +318,11 @@ justify-content: center;
   flex-wrap: wrap;
 }
 
+.commentlist {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 35px;
+  margin-right: 35px;
+}
 
