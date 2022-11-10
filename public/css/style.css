@@ -195,10 +195,28 @@ input:focus {
 .card-img-top {
   height: 400px;
 }
+
 .favoriteDiv {
-display: flex;
-justify-content:center;
-margin:20;
-padding:10;
-align-content: flex-start;
+  display: flex;
+  justify-content: center;
+  margin: 20;
+  padding: 10;
+  align-content: flex-start;
+}
+
+.btn-favorite {
+  cursor: pointer;
+  height: 50px;
+  /* outline: 1px solid red; */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.btn-favorite-add {
+  background-image: url('../svg/icons8-избранное-gold.svg');
+}
+
+.btn-favorite-remove {
+  background-image: url('../svg/icons8-избранное-dark.svg');
 }
