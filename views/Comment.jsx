@@ -10,7 +10,7 @@ const Commentar = ({ comments, user, book }) => {
       <Layout>
          <Header user={user} />
          <section className='container'>
-            <p>Добавить комментарий</p>
+            <p className='titleAddComment'>Добавить комментарий</p>
             <form method='post' action={`/comment/${book.id}`} className='commentForm'>
                <input className='commentInput' name='commentText' type='text'></input>
                <button type='submit' className='commentButton'>Сохранить</button>
