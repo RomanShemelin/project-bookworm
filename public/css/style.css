@@ -201,6 +201,7 @@ input:focus {
   height: 400px;
 }
 
+
 .bookList,
 .favoriteDiv {
   margin-top: 50px;
@@ -210,6 +211,7 @@ input:focus {
   padding: 10;
   align-content: flex-start;
 }
+
 
 .card-title,
 .card-title2 {
@@ -260,3 +262,21 @@ input:focus {
   color: rgb(243, 174, 46);
   margin-left: 20px;
 }
+
+.btn-favorite {
+  cursor: pointer;
+  height: 50px;
+  /* outline: 1px solid red; */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.btn-favorite-add {
+  background-image: url('../svg/icons8-избранное-gold.svg');
+}
+
+.btn-favorite-remove {
+  background-image: url('../svg/icons8-избранное-dark.svg');
+}
+
