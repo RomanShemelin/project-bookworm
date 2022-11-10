@@ -24,7 +24,7 @@ app.use('/book', bookPageRouter);
 app.use('/favorite', favoriteRouter);
 app.use('/editbook', editBookRouter);
 app.use('/search', searchBookRouter);
-app.use('/comment', commentsRouter)
+app.use('/comments', commentsRouter)
 
 
 app.listen(PORT, async () => {
