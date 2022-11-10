@@ -17,6 +17,6 @@ booklist.addEventListener("click", async (event) => {
   if (data.message === true) {
     event.target.classList.add("btn-favorite-remove");
     event.target.classList.remove("btn-favorite-add");
-    alert("Книга добавлена в раздел избранное");
+    
   }
 });
