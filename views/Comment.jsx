@@ -16,12 +16,13 @@ const Commentar = ({ comments, user, book }) => {
                <button type='submit' className='commentButton'>Сохранить</button>
             </form>
          </section>
-         <section className='commentlist'>
+         <div className='commentlist'>
 
-            {comments.map((comment) => <CommentCard key={comment.id} comment={comment} />)}
+            {comments.map((comment) => <CommentCard key={comment.id} comment={comment} user={user}/>)}
 
-         </section>
-         <script src='/js/comment.js'></script>
+         </div>
+         <script defer src='/js/comment.js'></script>
+         <script defer src='/js/deleteComment.js'></script>
       </Layout>
    )
 }

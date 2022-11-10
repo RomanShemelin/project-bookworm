@@ -14,9 +14,8 @@ module.exports = function BookCard({ user, book }) {
         {/* <p class="card-text">{newcomment.comment}</p> */}
         {user && (user.id === book.userId) && (<button type="button" className="btn btn-danger">Удалить</button>)}
         {user && (user.id === book.userId) && (<a href={`/editbook/${book.id}`} type="button" className="btn btn-warning">Изменить</a>)}
-        <a href={`/comment/${book.id}`} type='button' className='btn btn-warning'>Комментарии</a>
-        <div className= " btn-favorite btn-favorite-add">
-        </div>
+        <a href={`/comments/${book.id}`} type='button' className='btn btn-warning'>Комментарии</a>
+        <div className='btn-favorite btn-favorite-add'></div>
       </div>
     </div>
   )

@@ -13,12 +13,28 @@ router.get('/:id', async (req, res) => {
 
 router.post('/:id', async (req, res) => {
   const { user } = res.locals;
-
+  // console.log(user)
   const { commentText } = req.body;
   const { id } = req.params;
+  try {
+    const comment = await Comment.create({ comment: commentText, bookId: Number(id), userId: user.id });
+    console.log(comment, '+++++++++');
+    res.renderComponent(CommentCard, { comment, user }, { doctype: false });
 
-  const comment = await Comment.create({ comment: commentText, bookId: Number(id), userId: user.id });
-  res.renderComponent(CommentCard, { comment }, { doctype: false });
+  } catch (e) {
+    console.log(e.message);
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  const { user } = res.locals;
+  console.log(id, user);
+  if (!user) {
+    res.status(404);
+  }
+  const data = await Comment.destroy({ where: { id: Number(id), userId: Number(user.id) } });
+  res.json({ data });
 });
 
 module.exports = router;

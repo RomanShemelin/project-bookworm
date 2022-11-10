@@ -11,11 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ User, Book }) {
       // define association here
-      Comment.belongsTo(User, { foreignKey: 'userId', onDelete: 'CASCADE'});
+      Comment.belongsTo(User, { foreignKey: 'userId', onDelete: 'CASCADE' });
       Comment.belongsTo(Book, { foreignKey: 'bookId', onDelete: 'CASCADE' });
     }
   }
   Comment.init({
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER,
+    },
     comment: DataTypes.TEXT,
     userId: DataTypes.INTEGER,
     bookId: DataTypes.INTEGER,
