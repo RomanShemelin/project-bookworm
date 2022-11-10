@@ -16,7 +16,9 @@ module.exports = function Login({ title }) {
             <input type="password" name="password" placeholder="Password" required="required" />
             <button type="submit" className="btn btn-primary btn-block btn-large">Войти</button>
           </form>
+          <div id='error'></div>
         </div>
+
         <script defer src="/js/login.js" />
       </>
     </Layout >
