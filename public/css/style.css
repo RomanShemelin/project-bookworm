@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+@font-face {
+  font-family: Rostin;
+  src: url('../fonts/RF_Rostin/RF Rostin Regular.otf') format("opentype");
+}
+
 .btn {
   display: inline-block;
   *display: inline;
@@ -181,7 +186,7 @@ input:focus {
 .card {
   width: 400px;
   background-color: rgb(243, 250, 249);
-  height: 600px;
+  height: 700px;
   padding: 10px;
   border-radius: 15px;
   color: rgb(7, 7, 7);
@@ -196,12 +201,66 @@ input:focus {
   height: 400px;
 }
 
+
+.bookList,
 .favoriteDiv {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   margin: 20;
   padding: 10;
   align-content: flex-start;
+}
+
+
+.card-title,
+.card-title2 {
+  font-family: "Rostin", sans-serif;
+  margin-left: 20px;
+  overflow-wrap: break-word;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.card-title2 {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.card-body {
+
+}
+
+.btn {
+  display: inline-block;
+  color: rgb(10, 5, 5);
+  font-size: 21px;
+  text-decoration: none;
+  user-select: none;
+  padding: 0.3em 1em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  /* margin-left: 75px; */
+  font-family: "Rostin", Courier, monospace;
+}
+
+.btn:hover {
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.form-label {
+  color: rgb(243, 174, 46);
+  margin-left: 20px;
 }
 
 .btn-favorite {
@@ -220,3 +279,4 @@ input:focus {
 .btn-favorite-remove {
   background-image: url('../svg/icons8-избранное-dark.svg');
 }
+
