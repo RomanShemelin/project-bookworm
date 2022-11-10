@@ -19,9 +19,6 @@ module.exports = function Login({ title }) {
         </div>
         <script defer src="/js/login.js" />
       </>
-
-
-
     </Layout >
   );
 };
