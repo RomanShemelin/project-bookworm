@@ -14,12 +14,13 @@ module.exports = function SearchBookPage({ title, user }) {
             <input name="name" type="text" className='form-control' id="exampleInput" required autoComplete='off' />
           </div>
 
-          <button type="button" className="btn btn-primary">Найти</button>
+          <button type="submit" className="btn btn-primary">Найти</button>
         </form>
       </section>
       <div className='booklist'>
         <h2 className='text-text'>Результат поиска</h2>
       </div>
+      <script defer src="/js/searchbook.js" />
       
     </Layout>
   );

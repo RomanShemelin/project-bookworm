@@ -7,7 +7,8 @@ module.exports = function Main({ title, user, books }) {
   return (
     <Layout title={title}>
       <Header user={user} />
-      {user&&<BookList books={books} />}
+      {user && <BookList books={books} user={user} />}
+      <script src='/js/addtofavorite.js'></script>
     </Layout>
   );
 };

@@ -8,7 +8,6 @@ router.get('/:id', async (req, res) => {
   const bookt = Number(req.params.id);
   const book = await Book.findOne({ where: { id: bookt } });
   const comments = await Comment.findAll({ where: { bookId: bookt } });
-  console.log('poiuytrde=====================');
   res.renderComponent(Commentar, { comments, user, book });
 });
 

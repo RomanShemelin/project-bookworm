@@ -9,18 +9,19 @@ const Commentar = ({ comments, user, book }) => {
    return (
       <Layout>
          <Header user={user} />
-         <h5>Добавить комментарий</h5>
-         <form method='post' action={`/comment/${book.id}`} className='commentForm'>
-            <input className='commentInput' name='commentText' type='text'></input>
-            <button type='submit' className='commentButton'>Отправить</button>
-         </form>
-         
-         <section className='commentlist'>
-            
-            {comments.map((comment) => <CommentCard key={comment.id} comment={comment} />)}
-   
+         <section className='container'>
+            <h5>Добавить комментарий</h5>
+            <form method='post' action={`/comment/${book.id}`} className='commentForm'>
+               <input className='commentInput' name='commentText' type='text'></input>
+               <button type='submit' className='commentButton'>Сохранить</button>
+            </form>
          </section>
-            <script src='/js/comment.js'></script>
+         <section className='commentlist'>
+
+            {comments.map((comment) => <CommentCard key={comment.id} comment={comment} />)}
+
+         </section>
+         <script src='/js/comment.js'></script>
       </Layout>
    )
 }

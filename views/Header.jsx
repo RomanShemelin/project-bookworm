@@ -13,7 +13,7 @@ module.exports = function Header({ user }) {
                   <a className="nav-link" href="/">Главная</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/book">Добавить книгу</a>
+                  <a className="nav-link" href="/book">Мои книги</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/favorite">Избранное</a>

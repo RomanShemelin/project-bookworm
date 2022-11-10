@@ -19,14 +19,14 @@ router.route('/')
     const book = await Book.create({
       name, image, userId: user.id, author,
     });
-    console.log(book);
+    // console.log(book);
     await Comment.create({ comment, userId: user.id, bookId: book.id });
     res.renderComponent(BookCard, { user, book }, { doctype: false });
   });
 router.route('/:id')
   .delete(async (req, res) => {
     const { user } = res.locals;
-    console.log(req.params);
+    // console.log(req.params);
     const { id } = req.params;
     try {
       if (!user) {

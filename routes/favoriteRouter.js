@@ -26,6 +26,12 @@ router.delete('/:bookId', async (req, res) => {
     return res.status(500).json({ status: 'error', message: `${err.message}` });
   }
 });
+router.get('/addbook/:bookId', async (req, res) => {
+  const { user } = res.locals;
+  const { bookId } = req.params;
+  await Favorite.create({ userId: user.id, bookId });
+  res.json({ message: true });
+});
 //   const { id } = req.params;
 //   try {
 //     if (!user) {
