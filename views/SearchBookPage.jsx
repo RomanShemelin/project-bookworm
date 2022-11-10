@@ -10,8 +10,8 @@ module.exports = function SearchBookPage({ title, user }) {
       <section className='container'>
         <form method='POST' action='/search' className='findbook'>
           <div className="mb-3">
-            <label htmlFor="exampleInput" className="form-label"><h3>Название книги</h3></label>
-            <input name="name" type="text" className='form-control' id="exampleInput" required autoComplete='off' />
+            <label htmlFor="exampleInput" className="form-label"><h3></h3></label>
+            <input name="name" type="text" className='form-control' id="exampleInput" required autoComplete='off' placeholder='Введите название книги или темы для поиска' />
           </div>
 
           <button type="submit" className="btn btn-primary">Найти</button>
@@ -21,7 +21,7 @@ module.exports = function SearchBookPage({ title, user }) {
         <h2 className='text-text'>Результат поиска</h2>
       </div>
       <script defer src="/js/searchbook.js" />
-      
+
     </Layout>
   );
 };

@@ -9,6 +9,7 @@ module.exports = function Layout({ title, children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
         <link href="/css/style.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap" rel="stylesheet" />
         <title>{title}</title>
       </head>
       <body>
