@@ -7,15 +7,20 @@ module.exports = function BookCard({ user, book }) {
       <img src={book.image} className="card-img-top" alt="your book" />
       </div>
       <div className="card-body">
-      <h4 className="card-title">Название</h4>
+        <div className='card-content'>
+        <h4 className="card-title">Название</h4>
         <h4 className="card-title2">{book.name}</h4>
         <h4 className="card-title">Автор</h4>
         <h4 className="card-title2">{book.author}</h4>
+        </div>
         {/* <p class="card-text">{newcomment.comment}</p> */}
+        <div className='button-container'>
         {user && (user.id === book.userId) && (<button type="button" className="btn btn-danger">Удалить</button>)}
         {user && (user.id === book.userId) && (<a href={`/editbook/${book.id}`} type="button" className="btn btn-warning">Изменить</a>)}
         <a href={`/comments/${book.id}`} type='button' className='btn btn-warning'>Комментарии</a>
         <div className='btn-favorite btn-favorite-add'></div>
+        </div>
+
       </div>
     </div>
   )
