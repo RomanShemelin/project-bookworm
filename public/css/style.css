@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 @font-face {
-  font-family: Rostin;
-  src: url('../fonts/RF_Rostin/RF Rostin Regular.otf') format("opentype");
+  font-family: "Rostin";
+  src: url('../css/RF_Rostin/RF\ Rostin\ Regular.otf') format("opentype");
 }
 
 .btn {
@@ -204,7 +204,8 @@ input:focus {
 }
 
 .card-img-top {
-  height: 400px;
+  height: 400px; 
+  max-width: 300px;
 }
 
 
@@ -223,9 +224,23 @@ input:focus {
 .card-title,
 .card-title2 {
   /* position: relative; */
-  font-family: "Rostin", sans-serif;
+  font-family: "Inter", sans-serif;
   margin-left: 20px;
   overflow-wrap: break-word;
+}
+
+.card-title3,
+.card-title4 {
+  /* position: relative; */
+  font-family: "Inter", sans-serif;
+  margin-left: 20px;
+  /* margin-left: 20px; */
+  overflow-wrap: break-word;
+}
+
+.card-title3 {
+  font-weight: 500;
+  font-size: 25px;
 }
 
 .card-title {
@@ -238,6 +253,11 @@ input:focus {
   font-size: 20px;
 }
 
+.card-title5 {
+  font-weight: 300;
+  font-size: 20px;
+  font-style: italic;
+}
 
 .btn,
 .commentButton {
@@ -309,6 +329,7 @@ justify-content: center;
 
 .nav-link {
   font-size: 23px;
+font-family: "Rostin", sans-serif;
 }
 
 .search_div {
@@ -387,5 +408,18 @@ justify-content: center;
     width: 70%;
     margin-left: 50px;
   }
+
+  .titleAddComment {
+    margin-left: 30px;
+  }
+
+.btn-more{
+margin-bottom: 30px;
+}
+
+.btn-login,
+.btn-login:hover {
+margin-left:  0px;
+}
 
 
