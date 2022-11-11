@@ -24,6 +24,6 @@ form.addEventListener('submit', async (event) => {
     alert('Пожалуйста заполните все поля');
   } else {
     form.reset();
-    document.querySelector('.cardList').insertAdjacentHTML('afterbegin', data);
+    document.querySelector('.bookList').insertAdjacentHTML('afterbegin', data);
   }
 });
