@@ -29,8 +29,13 @@ router.delete('/:bookId', async (req, res) => {
 router.get('/addbook/:bookId', async (req, res) => {
   const { user } = res.locals;
   const { bookId } = req.params;
-  await Favorite.create({ userId: user.id, bookId });
-  res.json({ message: true });
+  const book = await Favorite.findOne({ where: { userId: user.id, bookId } });
+  if (!book) {
+    await Favorite.create({ userId: user.id, bookId });
+    res.json({ message: true });
+  } else {
+    res.json({ message: false });
+  }
 });
 //   const { id } = req.params;
 //   try {
