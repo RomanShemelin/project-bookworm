@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   const { user } = res.locals;
     const books = await Book.findAll();
    console.log(books)
-  res.renderComponent(Main, { user, title: 'Simple app', books });
+  res.renderComponent(Main, { user, title: 'Bookworm', books });
 });
 
 
