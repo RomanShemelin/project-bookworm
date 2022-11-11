@@ -8,7 +8,7 @@ const CommentCard = ({ comment, user }) => {
          <div className="card-body">
             <p className='card-text1'>Имя пользователя: {user.name}</p>
             <p className='card-text2'>{date}</p>
-            <p className='card-text'>Комментарий:{comment.comment}</p>
+            <p className='card-text3'>Комментарий: {comment.comment}</p>
             {user && (user.id === comment.userId) && (<button type='button' className='commentButton'>Удалить</button> )}
             
          </div>
