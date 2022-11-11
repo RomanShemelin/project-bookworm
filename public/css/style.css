@@ -72,6 +72,7 @@
 .btn-primary:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   color: #ffffff;
+  margin-left: 20px;
 }
 
 .btn-primary.active {
@@ -221,6 +222,7 @@ input:focus {
 
 .card-title,
 .card-title2 {
+  /* position: relative; */
   font-family: "Rostin", sans-serif;
   margin-left: 20px;
   overflow-wrap: break-word;
@@ -228,7 +230,7 @@ input:focus {
 
 .card-title {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 27px;
 }
 
 .card-title2 {
@@ -249,7 +251,7 @@ input:focus {
   border: 2px solid;
   border-radius: 10px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
   /* margin-left: 75px; */
   font-family: "Rostin", Courier, monospace;
 }
@@ -289,6 +291,7 @@ justify-content: center;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
+  margin-bottom: 30px;
 }
 
 .btn-favorite-add {
@@ -346,16 +349,43 @@ justify-content: center;
 .card-body {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding-bottom: 0px;
   }
 
-  .card-text,
-  .card-text1
+  .card-text3,
+  .card-text1,
+  .card-text2
   {
-    margin-left: 20px;    
+    margin-left: 25px; 
+    margin-right: 20px;   
   }
 
   .card-text1 {
+    font-weight: bolder;
     margin-top: 20px;
+  }
+
+  .card-text2
+  {
+    font-style: italic;
+    font-size: 17px;  
+  }
+
+  .card-text3 {
+    margin-bottom: 10px;
+  }
+
+  .card-content {
+    /* position:absolute; */
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin-left: 50px;
   }
 
 
