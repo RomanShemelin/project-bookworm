@@ -16,12 +16,17 @@ router.route('/')
       name, image, author, comment,
     } = req.body;
     // console.log(name, image, user.id, author, comment);
-    const book = await Book.create({
-      name, image, userId: user.id, author,
-    });
-    // console.log(book);
-    await Comment.create({ comment, userId: user.id, bookId: book.id });
-    res.renderComponent(BookCard, { user, book }, { doctype: false });
+
+    if (!name.trim() || !image.trim() || !author.trim() || !comment.trim()) {
+      res.send('Пожалуйста заполните все поля');
+    } else {
+      const book = await Book.create({
+        name, image, userId: user.id, author,
+      });
+      // console.log(book);
+      await Comment.create({ comment, userId: user.id, bookId: book.id });
+      res.renderComponent(BookCard, { user, book }, { doctype: false });
+    }
   });
 router.route('/:id')
   .delete(async (req, res) => {
@@ -57,8 +62,8 @@ router.route('/:id')
       if (book.name === name && book.image === image && book.author === author && newcomment.comment === comment) {
         return res.status(404).json({ status: 'error', message: 'Ничего не изменилось' });
       }
-      if (!name || !image || !author || !comment) {
-        return res.status(404).json({ status: 'error', message: 'Поля нужно заполнить' });
+      if (!name.trim() || !image.trim() || !author.trim() || !comment.trim()) {
+        return res.status(404).json({ status: 'error', message: 'Все поля нужно заполнить' });
       }
       book.name = name;
       book.image = image;

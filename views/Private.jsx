@@ -34,6 +34,7 @@ module.exports = function Private({ user, books }) {
       </div>
       <script defer src="/js/addbook.js" />
       <script defer src="/js/deletebook.js" />
+      <script src='/js/addtofavorite.js'></script>
 
 
     </Layout>

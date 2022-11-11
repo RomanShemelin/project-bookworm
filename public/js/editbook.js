@@ -24,7 +24,7 @@ changeform.addEventListener('submit', async (event) => {
   const data = await response.json();
   console.log(data);
   if (data.status === 'error') {
-    infoDiv.innerHTML = data.message;
+    alert(data.message);
   }
   if (data.status === 'success') {
     alert(data.message);
