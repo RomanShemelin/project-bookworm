@@ -7,8 +7,10 @@ module.exports = function Login({ title }) {
     <Layout title={title}>
       <Header />
       <>
-
         {/* <form id="login" method="POST" action="/auth/login"> */}
+        <div className='background'>
+
+        </div>
         <div className="login">
           <h1>Login</h1>
           <form id="login" method="POST" action="/auth/login">
