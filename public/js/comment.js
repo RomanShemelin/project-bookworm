@@ -10,9 +10,11 @@ commentForm.addEventListener('submit', async (event) => {
     }),
   });
   const comment = await res.text();
-
-
+  if(comment === 'Поле комментария не должно быть пустым') {
+    alert('Поле комментария не должно быть пустым')
+  } else {
   const list = document.querySelector('.commentlist');
-  list.insertAdjacentHTML('afterbegin', comment)
+  list.insertAdjacentHTML('afterbegin', comment);
   commentForm.reset();
+  }
 });
