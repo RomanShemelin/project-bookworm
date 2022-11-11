@@ -12,7 +12,7 @@ const Commentar = ({ comments, user, book }) => {
          <section className='container'>
             <p className='titleAddComment'>Добавить комментарий</p>
             <form method='post' action={`/comments/${book.id}`} className='commentForm'>
-               <input className='commentInput' name='commentText' type='text' autoComplete='off'></input>
+               <input className='commentInput' name='commentText' type='text' autoComplete='off' required></input>
                <button type='submit' className='commentButton'>Сохранить</button>
             </form>
             <div className='titleAddComment'>
@@ -20,9 +20,7 @@ const Commentar = ({ comments, user, book }) => {
          </div>
          </section>
          <div className='commentlist'>
-            
             {comments.map((comment) => <CommentCard key={comment.id} comment={comment} user={user} />)}
-
          </div>
          <script defer src='/js/comment.js'></script>
          <script defer src='/js/deleteComment.js'></script>

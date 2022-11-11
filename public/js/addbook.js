@@ -20,6 +20,10 @@ form.addEventListener('submit', async (event) => {
   });
   const data = await response.text();
   // console.log(data);
-  form.reset();
-  document.querySelector('.cardList').insertAdjacentHTML('afterbegin', data);
+  if (data === 'Пожалуйста заполните все поля') {
+    alert('Пожалуйста заполните все поля');
+  } else {
+    form.reset();
+    document.querySelector('.bookList').insertAdjacentHTML('afterbegin', data);
+  }
 });

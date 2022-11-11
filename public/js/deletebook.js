@@ -30,7 +30,4 @@ deleteform.addEventListener('click', async (event) => {
     method: 'GET',
   });
   const data = await response.json();
-  if (data.message === true) {
-    alert('Книга добавлена в раздел избранное');
-  }
 });
