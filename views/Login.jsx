@@ -14,7 +14,7 @@ module.exports = function Login({ title }) {
           <form id="login" method="POST" action="/auth/login">
             <input type="text" name="email" placeholder="Username" required="required" />
             <input type="password" name="password" placeholder="Password" required="required" />
-            <button type="submit" className="btn btn-primary btn-block btn-large">Войти</button>
+            <button type="submit" className="btn btn-primary btn-block btn-large btn-login">Войти</button>
           </form>
           <div id='error'></div>
         </div>
